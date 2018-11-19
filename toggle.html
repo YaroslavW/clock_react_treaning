@@ -3,6 +3,7 @@
       <head>
       <meta charset="UTF-8" />
       <title>React [RU] Tutorial</title>
+      <link href="Toggle.css" rel="stylesheet">
       <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
       <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
 
@@ -29,7 +30,7 @@
         }
         render(){
           return(
-            <button onClick={this.handleClickToggle}>
+            <button className={this.state.isToggle ? 'green' : 'red'} onClick={this.handleClickToggle}>
             {this.state.isToggle ? 'OFF' : 'ON'}
             </button>
             );
